@@ -1,0 +1,288 @@
+:root {
+    --row-level-0-fontSize: 18pt;
+    --row-level-1-fontSize: 16pt;
+    --row-level-2-fontSize: 14pt;
+    --row-level-3-fontSize: 12pt;
+    --row-level-0-color: var(--white);
+    --row-level-1-color: var(--white);
+}
+html.print-view {
+    --row-level-0-fontSize: 18pt;
+    --row-level-1-fontSize: 16pt;
+    --row-level-2-fontSize: 14pt;
+    --row-level-3-fontSize: 12pt;
+    --row-level-0-color: var(--black);
+    --row-level-1-color: var(--black);
+}
+.reports {
+    min-height: 100vh;
+    min-width: 95vw;
+    background-color: var(--gray);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    position: relative;
+}
+.reports table {
+    margin: 1rem;
+    font: inherit;
+    width: calc(100% - 2rem);
+    border-spacing: 0;
+    border: solid 1px var(--black);
+}
+.reports table th {
+    font: inherit;
+    border: solid 1px var(--black);
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    color: var(--white);
+    background-color: var(--purple);
+}
+.reports table td {
+    font: inherit;
+    border: solid 1px var(--black);
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+.reports table tr:nth-child(2n) td {
+    background-color: var(--ultra-light-purple);
+}
+.reports table td img {
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}
+.reports table td.action {
+    cursor: pointer;
+}
+.monthly-report-creator, .yearly-report-creator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.monthly-report-creator form, .yearly-report-creator form {
+    max-height: 90%;
+    width: 80%;
+    border: solid 3px var(--black);
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: white;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 2rem;
+}
+.monthly-report-creator  span, .yearly-report-creator span {
+    font: inherit;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+.monthly-report-creator  input, .yearly-report-creator input{
+    appearance: none;
+    font: inherit;
+    min-height: 2rem;
+    max-height: 2rem;
+    padding: 1rem 0.7rem;
+    font-size: 2.5rem;
+    border: solid 1px var(--black);
+    border-radius: 0.7rem;
+}
+.monthly-report-creator  select,  .yearly-report-creator select {
+    appearance: auto;
+    font: inherit;
+    min-height: 4rem;
+    max-height: 4rem;
+    font-size: 2.5rem;
+    border: solid 1px var(--black);
+    border-radius: 0.7rem;
+}
+.buttons-wrapper {
+    display: flex;
+    grid-column-end: 2 span;
+    height: 5rem;
+    justify-content: stretch;
+    align-items: stretch;
+    column-gap: 3rem;
+}
+.buttons-wrapper button {
+    flex: 1;
+    font: inherit;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: solid black 2px;
+}
+.buttons-wrapper button.cancel {
+    background-color: var(--gray);
+}
+.buttons-wrapper button.submit {
+    background-color: var(--purple);
+    color: var(--white);
+}
+.no-report-message {
+    font: inherit;
+    color: var(--black);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: auto;
+}
+.reports table tr.row-level-0 td {
+    background-color: var(--purple) !important;
+    color: var(--row-level-0-color) !important;
+    font-size: var(--row-level-0-fontSize) !important;
+    padding: 0.8rem;
+    font: inherit;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    text-align: center !important;
+}
+.reports table tr.row-level-1 td {
+    background-color: var(--light-purple) !important;
+    color: var(--row-level-0-color) !important;
+    font-size: var(--row-level-1-fontSize) !important;
+    padding: 0.8rem;
+    font: inherit;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+.reports table tr.row-level-2-a th, 
+.reports table tr.row-level-2-a td,
+.reports table tr.row-level-2-b th, 
+.reports table tr.row-level-2-b td
+{
+    background-color: var(--extra-light-purple) !important;
+    color: var(--black) !important;
+    font-size: var(--row-level-2-fontSize) !important;
+    padding: 0.8rem !important;
+    font: inherit;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+.reports table tr.row-level-2-a th {
+    text-align: left;
+}
+.reports table tr.row-level-2-a td {
+    text-align: right;
+}
+.reports table tr.row-level-2-b td {
+    text-align: center !important;
+}
+.reports table tr.row-level-3 td {
+    background-color: white !important;
+    color: var(--black) !important;
+    font-size: var(--row-level-3-fontSize) !important;
+    padding: 0.8rem;
+    font: inherit;
+    text-transform: uppercase !important;
+    font-weight: normal;
+    text-align: center !important;
+}
+/* Responsive */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .reports table th {
+        font-size: 2rem;
+        padding: 1rem 0.7rem;
+    }
+    .reports table td {
+        font-size: 1.4rem;
+        padding: 1rem 0.7rem;
+    }
+    .reports table td img {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .reports table th {
+        font-size: 1.5rem;
+        padding: 0.7rem 0.7rem;
+    }
+    .reports table td {
+        font-size: 1rem;
+        padding: 0.7rem 0.7rem;
+    }
+    .reports table td img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .monthly-report-creator form, .yearly-report-creator form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        max-height: 90%;
+        width: 80%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    .buttons-wrapper button {
+        flex: 1;
+        font: inherit;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: solid black 1px;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    :root {
+        --row-level-0-fontSize: 16pt;
+        --row-level-1-fontSize: 14pt;
+        --row-level-2-fontSize: 12pt;
+        --row-level-3-fontSize: 10pt;
+    }
+    .reports table th {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.3rem;
+    }
+    .reports table td {
+        font-size: 1rem;
+        padding: 0.5rem 0.3rem;
+    }
+    .reports table td img {
+        height: 2rem;
+        width: 2rem;
+    }
+    .monthly-report-creator form, .yearly-report-creator form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        max-height: 90%;
+        width: 80%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    .buttons-wrapper button {
+        flex: 1;
+        font: inherit;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: solid black 1px;
+    }
+}

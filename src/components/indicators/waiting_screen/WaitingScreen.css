@@ -1,0 +1,23 @@
+.waiting-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    cursor: wait;
+}
+
+.waiting-screen img {
+    height: 200px;
+    width: 200px;
+}

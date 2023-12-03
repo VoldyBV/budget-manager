@@ -1,0 +1,33 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--gray);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+
+}
+.preloader img {
+    width: 20rem;
+}
+.preloader span {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--black);
+}
+@media only screen and (max-width: 425px){
+    .preloader img {
+        width: 16rem;
+    }
+    .preloader span {
+        font-size: 2.5rem;
+    }
+}

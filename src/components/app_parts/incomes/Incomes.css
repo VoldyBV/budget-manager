@@ -1,0 +1,208 @@
+.incomes {
+    min-height: 100vh;
+    min-width: 95vw;
+    background-color: var(--gray);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    position: relative;
+}
+.incomes table {
+    margin: 1rem;
+    font: inherit;
+    width: calc(100% - 2rem);
+    border-spacing: 0;
+    border: solid 1px var(--black);
+}
+.incomes table th {
+    font: inherit;
+    border: solid 1px var(--black);
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    color: var(--white);
+    background-color: var(--purple);
+}
+.incomes table td {
+    font: inherit;
+    border: solid 1px var(--black);
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+.incomes table tr:nth-child(2n) td {
+    background-color: var(--ultra-light-purple);
+}
+.incomes table td img {
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}
+.incomes table td.action {
+    cursor: pointer;
+}
+.insert-income-form, .update-income-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insert-income-form form, .update-income-form form {
+    max-height: 90%;
+    width: 80%;
+    border: solid 3px var(--black);
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: white;
+    overflow: auto;
+
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: repeat(5, max-content);
+    column-gap: 4rem;
+    row-gap: 2rem;
+}
+.insert-income-form  span, .update-income-form span {
+    font: inherit;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+.insert-income-form  input, .update-income-form input {
+    appearance: none;
+    font: inherit;
+    height: 2rem;
+    padding: 1rem 0.7rem;
+    font-size: 2.5rem;
+    border: solid 1px var(--black);
+    border-radius: 0.7rem;
+}
+.insert-income-form  textarea, .update-income-form textarea {
+    appearance: none;
+    font: inherit;
+    min-height: 3rem;
+    height: 3rem;
+    max-height: 15rem;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    border: solid 1px var(--black);
+    border-radius: 0.7rem;
+    resize: vertical;
+}
+.buttons-wrapper {
+    display: flex;
+    grid-column-end: 2 span;
+    height: 5rem;
+    justify-content: stretch;
+    align-items: stretch;
+    column-gap: 3rem;
+}
+.buttons-wrapper button {
+    flex: 1;
+    font: inherit;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: solid black 2px;
+}
+.buttons-wrapper button.cancel {
+    background-color: var(--gray);
+}
+.buttons-wrapper button.submit {
+    background-color: var(--purple);
+    color: var(--white);
+}
+/* Responsive */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .incomes table th {
+        font-size: 2rem;
+        padding: 1rem 0.7rem;
+    }
+    .incomes table td {
+        font-size: 1.4rem;
+        padding: 1rem 0.7rem;
+    }
+    .incomes table td img {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .incomes table th {
+        font-size: 1.5rem;
+        padding: 0.7rem 0.7rem;
+    }
+    .incomes table td {
+        font-size: 1rem;
+        padding: 0.7rem 0.7rem;
+    }
+    .incomes table td img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .insert-income-form form, .update-income-form form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        max-height: 90%;
+        width: 80%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    .buttons-wrapper button {
+        flex: 1;
+        font: inherit;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: solid black 1px;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .incomes table th {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.3rem;
+    }
+    .incomes table td {
+        font-size: 1rem;
+        padding: 0.5rem 0.3rem;
+    }
+    .incomes table td img {
+        height: 2rem;
+        width: 2rem;
+    }
+    .insert-income-form form, .update-income-form form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        max-height: 90%;
+        width: 80%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    .buttons-wrapper button {
+        flex: 1;
+        font: inherit;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: solid black 1px;
+    }
+}

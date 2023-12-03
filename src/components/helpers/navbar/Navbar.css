@@ -1,0 +1,64 @@
+.navbar {
+    font: inherit;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--purple);
+    box-shadow: 0px -1rem 0px 0px var(--gray);
+    position: sticky;
+    top: 0rem;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.navbar button {
+    font: inherit;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 0.8rem;
+    color: var(--white);
+    transition: all 0.3s;
+    padding: 0 1rem;
+    text-align: left;
+}
+.navbar button:hover {
+    background-color: var(--light-purple);
+}
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .navbar {
+        height: 4rem;
+    }
+    .navbar button {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .navbar {
+        height: 3rem;
+        column-gap: 1rem;
+    }
+    .navbar button {
+        font-size: 1.2rem;
+        padding: 0 0.5rem;
+        letter-spacing: 0;
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .navbar {
+        height: 2.5rem;
+    }
+    .navbar button {
+        font-size: 1rem;
+    }
+}

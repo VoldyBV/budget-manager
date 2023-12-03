@@ -1,0 +1,15 @@
+/* here we will define all variables */
+:root {
+  font-size: 10px;
+
+  --black: #222;
+  --purple: #674ea6;
+  --light-purple: hsl(257, 36%, 55%);
+  --extra-light-purple: hsl(257, 36%, 80%);
+  --ultra-light-purple: hsl(257, 36%, 90%);
+  --gray: #eee;
+  --white: #f5f5f5;
+}
+.App {
+  text-align: center;
+}
