@@ -3,6 +3,7 @@ import * as Realm from 'realm-web';
 import { IExpense } from '../../../models/expense.interface';
 import TrashCan from '../../../shared_icons/trash_can.svg'
 import Pencil from '../../../shared_icons/pencil.svg'
+import CalendarIcon from '../../../shared_icons/calendar.svg'
 import "./Expenses.css"
 import Navbar from '../../helpers/navbar/Navbar';
 import { INavbarBtn } from '../../../models/navbar_btns.interface';
@@ -67,6 +68,14 @@ export default class Expenses extends Component<ExpensesProps, ExpensesState> {
       isInsertFormOpen: false,
       isUpdateFormOpen: false
     }
+  }
+  openDatePickerInsert() {
+    var input_type_date: HTMLInputElement = document.querySelector(".insert-expense-form input[type=date]")!;
+    input_type_date.showPicker();
+  }
+  openDatePickerUpdate() {
+    var input_type_date: HTMLInputElement = document.querySelector(".update-expense-form input[type=date]")!;
+    input_type_date.showPicker();
   }
   // generateDataList method dynamically generates list of options for filed 'category', based on the data in filed 'category' in database
   generateDataList(): React.ReactNode {
@@ -333,13 +342,22 @@ export default class Expenses extends Component<ExpensesProps, ExpensesState> {
         <div className='insert-expense-form' style={{display: this.state.isInsertFormOpen ? 'flex' : 'none'}}>
           <form onSubmit={(e: React.FormEvent) => {this.insertExpense(e)}}>
             <span>Date:</span>
-            <input 
-              type='date' 
-              name='date' 
-              value={this.state.insert_form_data.date}
-              required
-              onChange={this.handleChangeInsert}
-            ></input>
+            <button type='button' className="date-picker" onClick={this.openDatePickerInsert}>
+              <span>
+                {!!this.state.insert_form_data.date ? this.state.insert_form_data.date?.split('-').reverse().join('.') : "Pick a date..."}
+              </span>
+              <div className='calendar-container'>
+                <img src={CalendarIcon}/>
+                {/* Real date picker */}
+                <input 
+                  type='date' 
+                  name='date' 
+                  value={this.state.insert_form_data.date}
+                  required
+                  onChange={this.handleChangeInsert}
+                ></input>
+              </div>
+            </button>
 
             <span>Amount:</span>
             <input 
@@ -391,13 +409,22 @@ export default class Expenses extends Component<ExpensesProps, ExpensesState> {
         <div className='update-expense-form' style={{display: this.state.isUpdateFormOpen ? 'flex' : 'none'}}>
           <form onSubmit={(e: React.FormEvent) => {this.updateExpense(e)}}>
             <span>Date:</span>
-            <input 
-              type='date' 
-              name='date' 
-              value={this.state.update_form_data.date}
-              required
-              onChange={this.handleChangeUpdate}
-            ></input>
+            <button type='button' className="date-picker" onClick={this.openDatePickerUpdate}>
+              <span>
+                {!!this.state.update_form_data.date ? this.state.update_form_data.date?.split('-').reverse().join('.') : "Pick a date..."}
+              </span>
+              <div className='calendar-container'>
+                <img src={CalendarIcon}/>
+                {/* Real date picker */}
+                <input 
+                  type='date' 
+                  name='date' 
+                  value={this.state.update_form_data.date}
+                  required
+                  onChange={this.handleChangeUpdate}
+                ></input>
+              </div>
+            </button>
 
             <span>Amount:</span>
             <input 

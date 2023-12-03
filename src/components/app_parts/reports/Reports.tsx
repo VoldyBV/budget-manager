@@ -4,6 +4,7 @@ import Navbar from '../../helpers/navbar/Navbar'
 import { IIncome } from '../../../models/income.interface'
 import { IExpense } from '../../../models/expense.interface'
 import { INavbarBtn } from '../../../models/navbar_btns.interface'
+import CalendarIcon from '../../../shared_icons/calendar.svg'
 import * as ReportTypes from '../../../models/report_types.interface'
 
 interface ReportsProps {
@@ -59,8 +60,8 @@ export default class Reports extends Component<ReportsProps, ReportsState> {
     this.state = {
       navbar_btns: [
         {button_text: "Go back", onClick: props.goToControlPanel},
-        {button_text: "Create monthly report", onClick: this.openMonthlyReportCreator},
-        {button_text: "Create yearly report", onClick: this.openYearlyReportCreator},
+        {button_text: "New monthly report", onClick: this.openMonthlyReportCreator},
+        {button_text: "New yearly report", onClick: this.openYearlyReportCreator},
         {button_text: "Print report", onClick: this.printReport}
       ],
       monthly_report_settings: {
@@ -74,6 +75,34 @@ export default class Reports extends Component<ReportsProps, ReportsState> {
       isMonthlyReportCreatorOpen: false,
       isYearlyReportCreatorOpen: false
     }
+  }
+  openMonthPicker() {
+    var input_type_date: HTMLInputElement = document.querySelector(".monthly-report-creator input[type=month]")!;
+    input_type_date.showPicker();
+  }
+  showMonthPickerValue() : string {
+    if(this.state.monthly_report_settings.month_and_year === '') return "Pick month and year..."
+
+    var month_in_letters = '';
+    var month = this.state.monthly_report_settings.month_and_year.split('-')[1];
+    var year = this.state.monthly_report_settings.month_and_year.split('-')[0]
+
+    switch(month) {
+      case '01': month_in_letters = "January"; break;
+      case '02': month_in_letters = "February"; break;
+      case '03': month_in_letters = "March"; break;
+      case '04': month_in_letters = "April"; break;
+      case '05': month_in_letters = "May"; break;
+      case '06': month_in_letters = "June"; break;
+      case '07': month_in_letters = "July"; break;
+      case '08': month_in_letters = "August"; break;
+      case '09': month_in_letters = "September"; break;
+      case '10': month_in_letters = "October"; break;
+      case '11': month_in_letters = "November"; break;
+      case '12': month_in_letters = "December"; break;
+      default: break;
+    }
+    return `${month_in_letters} ${year}`;
   }
   printReport() {
     var html: HTMLElement = document.querySelector("html")!;
@@ -740,13 +769,22 @@ export default class Reports extends Component<ReportsProps, ReportsState> {
             </select>
 
             <span>Choose month and year</span>
-            <input 
-              name='month_and_year' 
-              type='month'
-              value={this.state.monthly_report_settings.month_and_year}
-              onChange={this.handleMonthlyReportCreatorChange}
-              required
-            ></input>
+            <button type='button' className="date-picker" onClick={this.openMonthPicker}>
+              <span>
+                {this.showMonthPickerValue()}
+              </span>
+              <div className='calendar-container'>
+                <img src={CalendarIcon}/>
+                {/* Real date picker */}
+                <input 
+                  name='month_and_year' 
+                  type='month'
+                  value={this.state.monthly_report_settings.month_and_year}
+                  onChange={this.handleMonthlyReportCreatorChange}
+                  required
+                ></input>
+              </div>
+            </button>
 
             <div className='buttons-wrapper'>
               <button type='button' className='cancel' onClick={this.closeMonthlyReportCreator}>{'Cancel'}</button>

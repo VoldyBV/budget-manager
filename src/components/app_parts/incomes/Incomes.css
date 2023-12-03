@@ -85,6 +85,35 @@
     border: solid 1px var(--black);
     border-radius: 0.7rem;
 }
+.date-picker {
+    appearance: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: inherit;
+    height: 4rem;
+    box-sizing: unset;
+    font-weight: 400;
+    font-size: 2.5rem;
+    border: solid 1px var(--black);
+    border-radius: 0.7rem;
+    background-color: white;
+    cursor: pointer;
+}
+.date-picker span {
+    font: inherit;
+}
+.date-picker .calendar-container {
+    height: calc(100% - 1rem);
+}
+.date-picker .calendar-container img {
+    height: 100%;
+}
+.date-picker .calendar-container  input[type=date], .date-picker .calendar-container input[type=date] {
+    width: 0;
+    padding: 0;
+    border: none;
+} 
 .insert-income-form  textarea, .update-income-form textarea {
     appearance: none;
     font: inherit;
