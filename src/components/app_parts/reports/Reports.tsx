@@ -81,7 +81,7 @@ export default class Reports extends Component<ReportsProps, ReportsState> {
     input_type_date.showPicker();
   }
   showMonthPickerValue() : string {
-    if(this.state.monthly_report_settings.month_and_year === '') return "Pick month and year..."
+    if(this.state.monthly_report_settings.month_and_year === '') return "Pick month..."
 
     var month_in_letters = '';
     var month = this.state.monthly_report_settings.month_and_year.split('-')[1];
