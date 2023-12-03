@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/budget-manager/static/css/main.3c83b16a.css",
-    "main.js": "/budget-manager/static/js/main.54102877.js",
+    "main.css": "/budget-manager/static/css/main.c5f7537e.css",
+    "main.js": "/budget-manager/static/js/main.b52a22d6.js",
     "static/js/787.1d8d3926.chunk.js": "/budget-manager/static/js/787.1d8d3926.chunk.js",
     "static/media/pencil.svg": "/budget-manager/static/media/pencil.a96d05275e4caaad3e6a1ec543712518.svg",
     "static/media/hour_glass.svg": "/budget-manager/static/media/hour_glass.71f7e0fc4abfc6f644242e871541c697.svg",
+    "static/media/calendar.svg": "/budget-manager/static/media/calendar.9515f57d0db21a0f0ea5893e87028352.svg",
     "static/media/trash_can.svg": "/budget-manager/static/media/trash_can.3da0887a50c7141ab2446d372ce1fcb9.svg",
     "static/media/check_mark.svg": "/budget-manager/static/media/check_mark.d836db0b1472fc594e5efdd7fb92e5e1.svg",
     "index.html": "/budget-manager/index.html",
     "static/media/spinner.svg": "/budget-manager/static/media/spinner.d6e27a341dc4e0c5545f577d01dd16e8.svg",
-    "main.3c83b16a.css.map": "/budget-manager/static/css/main.3c83b16a.css.map",
-    "main.54102877.js.map": "/budget-manager/static/js/main.54102877.js.map",
+    "main.c5f7537e.css.map": "/budget-manager/static/css/main.c5f7537e.css.map",
+    "main.b52a22d6.js.map": "/budget-manager/static/js/main.b52a22d6.js.map",
     "787.1d8d3926.chunk.js.map": "/budget-manager/static/js/787.1d8d3926.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c83b16a.css",
-    "static/js/main.54102877.js"
+    "static/css/main.c5f7537e.css",
+    "static/js/main.b52a22d6.js"
   ]
 }
