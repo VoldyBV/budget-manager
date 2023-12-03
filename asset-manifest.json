@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/budget-manager/static/css/main.c5f7537e.css",
-    "main.js": "/budget-manager/static/js/main.b52a22d6.js",
+    "main.js": "/budget-manager/static/js/main.bcc63201.js",
     "static/js/787.1d8d3926.chunk.js": "/budget-manager/static/js/787.1d8d3926.chunk.js",
     "static/media/pencil.svg": "/budget-manager/static/media/pencil.a96d05275e4caaad3e6a1ec543712518.svg",
     "static/media/hour_glass.svg": "/budget-manager/static/media/hour_glass.71f7e0fc4abfc6f644242e871541c697.svg",
@@ -11,11 +11,11 @@
     "index.html": "/budget-manager/index.html",
     "static/media/spinner.svg": "/budget-manager/static/media/spinner.d6e27a341dc4e0c5545f577d01dd16e8.svg",
     "main.c5f7537e.css.map": "/budget-manager/static/css/main.c5f7537e.css.map",
-    "main.b52a22d6.js.map": "/budget-manager/static/js/main.b52a22d6.js.map",
+    "main.bcc63201.js.map": "/budget-manager/static/js/main.bcc63201.js.map",
     "787.1d8d3926.chunk.js.map": "/budget-manager/static/js/787.1d8d3926.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5f7537e.css",
-    "static/js/main.b52a22d6.js"
+    "static/js/main.bcc63201.js"
   ]
 }
